@@ -13,6 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Travel App',
         theme: ThemeData(
+          textTheme: TextTheme(
+              bodyMedium:
+                  const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+              bodySmall: TextStyle(
+                  fontSize: 15,
+                  color: const Color(0xFF3B3636).withOpacity(0.75))),
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
