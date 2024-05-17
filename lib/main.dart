@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout_travel_app/features/home/home.dart';
+import 'package:flutter_layout_travel_app/features/natural_wonders/natural_wonders.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,17 +12,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Travel App',
-        theme: ThemeData(
-          textTheme: TextTheme(
-              bodyMedium:
-                  const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-              bodySmall: TextStyle(
-                  fontSize: 15,
-                  color: const Color(0xFF3B3636).withOpacity(0.75))),
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const HomeScreen());
+      title: 'Travel App',
+      theme: ThemeData(
+        textTheme: TextTheme(
+            bodyMedium:
+                const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+            bodySmall: TextStyle(
+                fontSize: 15,
+                color: const Color(0xFF3B3636).withOpacity(0.75))),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/natural-wonders': (context) => const NaturalWonders()
+      },
+    );
   }
 }
