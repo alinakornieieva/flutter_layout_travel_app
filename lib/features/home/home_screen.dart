@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                     'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility of scenic landscapes, the allure of historical landmarks, or the excitement of vibrant cities, our curated collection of places to visit offers something for every traveler.',
                     style: theme.textTheme.bodySmall),
                 const SizedBox(height: 45.0),
-                Image.asset('assets/image_1.png'),
+                Center(child: Image.asset('assets/image_1.png')),
                 const SizedBox(height: 25.0),
                 const Text('Select a Place from the categories',
                     style: TextStyle(
@@ -61,6 +61,7 @@ class HomeScreen extends StatelessWidget {
                   mainAxisSpacing: 14,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
+                  childAspectRatio: (1 / 0.75),
                   children: [
                     Container(
                         decoration: BoxDecoration(

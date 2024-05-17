@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layout_travel_app/features/home/home_screen.dart';
+import 'package:flutter_layout_travel_app/features/home/home.dart';
 
 void main() {
   runApp(const MyApp());
