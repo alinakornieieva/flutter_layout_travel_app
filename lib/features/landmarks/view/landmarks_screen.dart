@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../uikit/ui_colors.dart';
+import 'package:flutter_layout_travel_app/uikit/ui_colors.dart';
 
 class Landmarks extends StatelessWidget {
   const Landmarks({super.key});

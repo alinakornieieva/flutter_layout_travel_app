@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Travel App',
       theme: ThemeData(
         textTheme: TextTheme(
+            titleMedium:
+                const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             bodyMedium:
                 const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
             bodySmall: TextStyle(

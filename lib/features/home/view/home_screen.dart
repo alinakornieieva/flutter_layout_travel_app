@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../uikit/ui_colors.dart';
+import 'package:flutter_layout_travel_app/uikit/ui_colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -109,16 +108,21 @@ class HomeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                           color: const Color(0xFFC2D9FF)),
                       height: 112,
-                      child: Center(
-                          child: Text('Cultural',
-                              style: theme.textTheme.bodyMedium))),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed('/cultural');
+                        },
+                        child: Center(
+                            child: Text('Cultural',
+                                style: theme.textTheme.bodyMedium)),
+                      )),
                 ],
               ),
               const SizedBox(height: 14),
               Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xFFFFE500)),
+                      color: UIColor.yellow),
                   height: 112,
                   width: double.infinity,
                   child: Center(
