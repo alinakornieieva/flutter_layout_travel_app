@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layout_travel_app/uikit/ui_colors.dart';
+import '../../../uikit/ui_colors.dart';
 
-class NaturalWonders extends StatelessWidget {
-  const NaturalWonders({super.key});
+class Nightlife extends StatelessWidget {
+  const Nightlife({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,9 @@ class NaturalWonders extends StatelessWidget {
                 child: const Icon(Icons.arrow_back, size: 21),
               ),
               const SizedBox(width: 5),
-              const Text('Natural Wonders',
+              const Text('Nightlife',
                   style: TextStyle(
-                      color: UIColor.green,
+                      color: UIColor.orange,
                       fontSize: 32,
                       fontWeight: FontWeight.w600)),
             ],
@@ -37,12 +37,12 @@ class NaturalWonders extends StatelessWidget {
           const SizedBox(height: 36),
           Text('Nature Wonders Place-1',
               style: TextStyle(
-                  color: UIColor.green.withOpacity(0.5),
+                  color: UIColor.orange.withOpacity(0.5),
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           const SizedBox(height: 12),
           Image.asset(
-            'assets/nature2.png',
+            'assets/night2.png',
             width: double.infinity,
             fit: BoxFit.fill,
           ),
@@ -53,12 +53,12 @@ class NaturalWonders extends StatelessWidget {
           const SizedBox(height: 36),
           Text('Nature Wonders Place-2',
               style: TextStyle(
-                  color: UIColor.green.withOpacity(0.5),
+                  color: UIColor.orange.withOpacity(0.5),
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           const SizedBox(height: 12),
           Image.asset(
-            'assets/nature1.png',
+            'assets/night1.png',
             width: double.infinity,
             fit: BoxFit.fill,
           ),
