@@ -125,9 +125,14 @@ class HomeScreen extends StatelessWidget {
                       color: UIColor.yellow),
                   height: 112,
                   width: double.infinity,
-                  child: Center(
-                      child: Text('Book For A Ride Today!',
-                          style: theme.textTheme.bodyMedium)))
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/booking');
+                    },
+                    child: Center(
+                        child: Text('Book For A Ride Today!',
+                            style: theme.textTheme.bodyMedium)),
+                  ))
             ],
           ),
         ),
