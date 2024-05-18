@@ -96,9 +96,14 @@ class HomeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                           color: const Color(0xFFC2D9FF)),
                       height: 112,
-                      child: Center(
-                          child: Text('Landmarks',
-                              style: theme.textTheme.bodyMedium))),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed('/landmarks');
+                        },
+                        child: Center(
+                            child: Text('Landmarks',
+                                style: theme.textTheme.bodyMedium)),
+                      )),
                   Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
