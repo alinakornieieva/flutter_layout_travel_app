@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_travel_app/features/booking/booking.dart';
+import 'package:flutter_layout_travel_app/shared/widgets/app_image.dart';
+import 'package:flutter_layout_travel_app/shared/widgets/rating.dart';
 import 'package:flutter_layout_travel_app/uikit/ui_colors.dart';
 
 class Booking extends StatelessWidget {
@@ -58,65 +61,48 @@ class Booking extends StatelessWidget {
                   style: theme.textTheme.titleMedium
                       ?.copyWith(color: UIColor.purple)),
               const SizedBox(height: 10),
-              Container(
-                clipBehavior: Clip.hardEdge,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(12)),
-                child: Opacity(
-                  opacity: 0.5,
-                  child: Image.asset('assets/cultural.png',
-                      width: double.infinity, fit: BoxFit.fill),
+              Stack(children: [
+                Container(
+                  clipBehavior: Clip.hardEdge,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                  child: const Opacity(
+                    opacity: 0.8,
+                    child: AppImage(image: 'assets/cultural.png'),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 12),
-              Text('Fill The Details',
-                  style: theme.textTheme.titleMedium
-                      ?.copyWith(color: UIColor.purple)),
-              const SizedBox(height: 12),
-              Text('User Name'),
-              const SizedBox(height: 6),
-              const TextField(
-                  cursorColor: UIColor.red,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: UIColor.red)),
-                    contentPadding: EdgeInsets.all(8),
-                    isCollapsed: true,
-                  )),
-              Text('Country'),
-              const SizedBox(height: 6),
-              const TextField(
-                  cursorColor: UIColor.red,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: UIColor.red)),
-                    contentPadding: EdgeInsets.all(8),
-                    isCollapsed: true,
-                  )),
-              const SizedBox(height: 12),
-              Text('Team Size'),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  Container(
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: UIColor.purple),
-                    width: 78,
-                    height: 78,
-                    child: const Center(
-                      child: Text(
-                        '3',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 46),
+
+                Positioned(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Selected Place',
+                        style: theme.textTheme.titleMedium
+                            ?.copyWith(color: Colors.white),
                       ),
-                    ),
-                  )
-                ],
-              )
+                      const Text(
+                          'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility visit offers something for every traveler.',
+                          style: TextStyle(color: Colors.white)),
+                      const Rating()
+                    ],
+                  ),
+                )
+
+                // const Positioned(
+                //     top: 5, left: 10, child: Text('Selected Place')),
+                // Positioned(
+                //   top: 20,
+                //   left: 10,
+                //   child: Text(
+                //     'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility visit offers something for every traveler.',
+                //   ),
+                // ),
+                // const Positioned(
+                //     bottom: 10, left: 10, right: 10, child: Rating())
+              ]),
+              const SizedBox(height: 12),
+              const DetailsForm(),
             ],
           ),
         ),

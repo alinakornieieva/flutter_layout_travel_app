@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_travel_app/features/home/home.dart';
+import 'package:flutter_layout_travel_app/shared/widgets/widgets.dart';
 import 'package:flutter_layout_travel_app/uikit/ui_colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -40,84 +42,17 @@ class HomeScreen extends StatelessWidget {
                       )
                     ]),
               ),
-              Text(
-                  'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility of scenic landscapes, the allure of historical landmarks, or the excitement of vibrant cities, our curated collection of places to visit offers something for every traveler.',
-                  style: theme.textTheme.bodySmall),
+              const MainText(),
               const SizedBox(height: 45.0),
-              Image.asset(
-                'assets/image_1.png',
-                width: double.infinity,
-                fit: BoxFit.fill,
-              ),
+              const AppImage(image: 'assets/image_1.png'),
               const SizedBox(height: 25.0),
               const Text('Select a Place from the categories',
                   style: TextStyle(
                       color: UIColor.purple,
                       fontSize: 16,
                       fontWeight: FontWeight.w600)),
-              const SizedBox(height: 14.0),
-              GridView.count(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 14,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                childAspectRatio: (1 / 0.75),
-                children: [
-                  Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: UIColor.lightPurple),
-                      height: 112,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/natural-wonders');
-                        },
-                        child: Center(
-                            child: Text('Natural Wonders',
-                                style: theme.textTheme.bodyMedium)),
-                      )),
-                  Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: UIColor.lightPurple),
-                      height: 112,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/nightlife');
-                        },
-                        child: Center(
-                            child: Text('Nightlife',
-                                style: theme.textTheme.bodyMedium)),
-                      )),
-                  Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: const Color(0xFFC2D9FF)),
-                      height: 112,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/landmarks');
-                        },
-                        child: Center(
-                            child: Text('Landmarks',
-                                style: theme.textTheme.bodyMedium)),
-                      )),
-                  Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: const Color(0xFFC2D9FF)),
-                      height: 112,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/cultural');
-                        },
-                        child: Center(
-                            child: Text('Cultural',
-                                style: theme.textTheme.bodyMedium)),
-                      )),
-                ],
-              ),
+              const SizedBox(height: 14),
+              const Categories(),
               const SizedBox(height: 14),
               Container(
                   decoration: BoxDecoration(

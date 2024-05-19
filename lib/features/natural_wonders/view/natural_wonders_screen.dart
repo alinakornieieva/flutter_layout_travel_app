@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_travel_app/shared/widgets/widgets.dart';
 import 'package:flutter_layout_travel_app/uikit/ui_colors.dart';
 
 class NaturalWonders extends StatelessWidget {
@@ -6,7 +7,6 @@ class NaturalWonders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Scaffold(
         body: SingleChildScrollView(
             child: Padding(
@@ -31,9 +31,7 @@ class NaturalWonders extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 36),
-          Text(
-              'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility visit offers something for every traveler.',
-              style: theme.textTheme.bodySmall),
+          const MainText(),
           const SizedBox(height: 36),
           Text('Nature Wonders Place-1',
               style: TextStyle(
@@ -41,15 +39,9 @@ class NaturalWonders extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           const SizedBox(height: 12),
-          Image.asset(
-            'assets/nature2.png',
-            width: double.infinity,
-            fit: BoxFit.fill,
-          ),
+          const AppImage(image: 'assets/nature2.png'),
           const SizedBox(height: 12),
-          Text(
-              'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility visit offers something for every traveler.',
-              style: theme.textTheme.bodySmall),
+          const MainText(),
           const SizedBox(height: 36),
           Text('Nature Wonders Place-2',
               style: TextStyle(
@@ -57,15 +49,9 @@ class NaturalWonders extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           const SizedBox(height: 12),
-          Image.asset(
-            'assets/nature1.png',
-            width: double.infinity,
-            fit: BoxFit.fill,
-          ),
+          const AppImage(image: 'assets/nature1.png'),
           const SizedBox(height: 12),
-          Text(
-              'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility visit offers something for every traveler.',
-              style: theme.textTheme.bodySmall),
+          const MainText(),
         ],
       ),
     )));

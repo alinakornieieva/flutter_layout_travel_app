@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_travel_app/shared/widgets/widgets.dart';
 import 'package:flutter_layout_travel_app/uikit/ui_colors.dart';
 
 class Nightlife extends StatelessWidget {
@@ -41,11 +42,7 @@ class Nightlife extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           const SizedBox(height: 12),
-          Image.asset(
-            'assets/night2.png',
-            width: double.infinity,
-            fit: BoxFit.fill,
-          ),
+          const AppImage(image: 'assets/night2.png'),
           const SizedBox(height: 12),
           Text(
               'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility visit offers something for every traveler.',
@@ -57,11 +54,7 @@ class Nightlife extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           const SizedBox(height: 12),
-          Image.asset(
-            'assets/night1.png',
-            width: double.infinity,
-            fit: BoxFit.fill,
-          ),
+          const AppImage(image: 'assets/night1.png'),
           const SizedBox(height: 12),
           Text(
               'Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you`re seeking the tranquility visit offers something for every traveler.',
